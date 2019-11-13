@@ -71,13 +71,7 @@ public class FakeName {
 
 
 
-	@EventHandler
-	public void serverLoad(FMLServerStartingEvent event)
-	{
-		event.registerServerCommand(new CommandFakeName());
-		event.registerServerCommand(new CommandRealName());
 
-	}
 
 
 
@@ -125,7 +119,7 @@ public class FakeName {
 			{
 				while(playersTracking.hasNext())
 				{
-					FakeName.network.sendTo(new FakeNamePacket(player.getEntityData().getString("fakename") , player.getEntityId(), 0), (EntityPlayerMP) playersTracking.next());
+					
 				}
 			}
 		}
